@@ -84,23 +84,23 @@ body {
 
 /* Custom icons for each link */
 #sidebar a[href="index.html"]::before {
-    background-image: url('emoji.svg');
+    background-image: url('images/emoji.svg');
 }
 
 #sidebar a[href="about.html"]::before {
-    background-image: url('user.svg');
+    background-image: url('images/user.svg');
 }
 
 #sidebar a[href="engineering-projects.html"]::before {
-    background-image: url('settings.svg');
+    background-image: url('images/settings.svg');
 }
 
 #sidebar a[href="software-projects.html"]::before {
-    background-image: url('documentation.svg');
+    background-image: url('images/documentation.svg');
 }
 
 #sidebar a[href="contact.html"]::before {
-    background-image: url('email.svg');
+    background-image: url('images/email.svg');
 }
 
 #sidebar span {
