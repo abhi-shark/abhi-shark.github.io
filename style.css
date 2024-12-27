@@ -1,7 +1,19 @@
+/* Add padding to main content to prevent overlap */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+}
+
+/* Add this to wrap your main content */
+.main-content {
+    margin-right: 60px; /* Same as sidebar width */
+    transition: margin-right 0.3s ease;
+}
+
+/* When sidebar is hovered, increase margin */
+#sidebar:hover + .main-content {
+    margin-right: 250px;
 }
 
 #sidebar {
@@ -18,24 +30,6 @@ body {
 
 #sidebar:hover {
     width: 250px;
-}
-
-#sidebar .logo {
-    padding: 20px 0;
-    text-align: center;
-    background-color: #86C5D8;
-    color: white;
-    display: none;
-}
-
-#sidebar:hover .logo {
-    display: block;
-}
-
-#sidebar .logo h3 {
-    margin: 0;
-    font-size: 18px;
-    white-space: nowrap;
 }
 
 #sidebar ul {
@@ -61,10 +55,52 @@ body {
     background-color: #86C5D8;
 }
 
-#sidebar i {
-    font-size: 24px;
-    width: 30px;
-    text-align: center;
+#sidebar a::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Highlight active page */
+
+#sidebar a.active {
+    background-color: #86C5D8;
+    position: relative;
+}
+
+#sidebar a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #4a90a3;
+}
+
+/* Custom icons for each link */
+#sidebar a[href="index.html"]::before {
+    background-image: url('emoji.svg');
+}
+
+#sidebar a[href="about.html"]::before {
+    background-image: url('user.svg');
+}
+
+#sidebar a[href="engineering-projects.html"]::before {
+    background-image: url('settings.svg');
+}
+
+#sidebar a[href="software-projects.html"]::before {
+    background-image: url('documentation.svg');
+}
+
+#sidebar a[href="contact.html"]::before {
+    background-image: url('email.svg');
 }
 
 #sidebar span {
@@ -78,10 +114,15 @@ body {
 }
 
 @media (max-width: 768px) {
+    .main-content {
+        margin-right: 0;
+        margin-top: 60px;
+    }
+
     #sidebar {
         width: 100%;
-        height: auto;
-        position: relative;
+        height: 60px;
+        position: fixed;
     }
 
     #sidebar ul {
@@ -97,11 +138,7 @@ body {
     #sidebar a {
         flex-direction: column;
         text-align: center;
-        padding: 10px;
-    }
-
-    #sidebar i {
-        font-size: 20px;
+        padding: 5px;
     }
 
     #sidebar span {
@@ -113,9 +150,5 @@ body {
 
     #sidebar:hover {
         width: 100%;
-    }
-
-    #sidebar .logo {
-        display: none;
     }
 }
