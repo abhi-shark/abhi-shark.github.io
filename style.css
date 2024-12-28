@@ -1,3 +1,6 @@
+
+/* Nav Bar CSS Code */
+
 /* Add padding to main content to prevent overlap */
 body {
     margin: 0;
@@ -152,3 +155,48 @@ body {
         width: 100%;
     }
 }
+/*--------------------------------------------------*/
+/* Header CSS */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.page-header {
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.header-content h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* For image backgrounds */
+.page-header.with-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* For video backgrounds */
+.page-header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
