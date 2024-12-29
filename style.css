@@ -312,3 +312,104 @@ body {
         width: 100%;
     }
 }
+
+
+/*--------------------------------------------------*/
+/* About Page Styles */
+/* Education */
+.about-container {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-header {
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.education-entry {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.education-logo {
+    width: 94px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.education-details {
+    flex: 1;
+}
+
+.education-subheader {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.education-dates {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.education-placeholder {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #777;
+}
+
+.section-divider {
+    border: none;
+    border-top: 2px solid #86C5D8;
+    margin: 20px 20px;
+}
+
+/* Experience */
+
+.experience-container {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-entry {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.experience-details {
+    flex: 1;
+}
+
+.experience-subheader {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.experience-dates {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.experience-description {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #777;
+}
