@@ -587,3 +587,37 @@ body {
         max-width: 300px;
     }
 }
+
+/* Scroll bar code because i thought the regular scroll bar looks ugly and thick */
+/* Webkit browsers like Chrome, Safari and Edge */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border: none;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(74, 144, 163, 0.7);
+    border-radius: 6px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(74, 144, 163, 0.9);
+}
+
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(74, 144, 163, 0.7) transparent;
+}
