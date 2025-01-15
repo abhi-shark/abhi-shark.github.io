@@ -12,3 +12,21 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             // Show error message
         });
 });
+
+
+//Event listener for clicks on the timeline cards
+//to highlight them for mobile users
+
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Remove 'selected' class from all cards
+            projectCards.forEach(c => c.classList.remove('selected'));
+            
+            // Add 'selected' class to clicked card
+            card.classList.add('selected');
+        });
+    });
+});
