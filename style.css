@@ -711,3 +711,270 @@ body {
 }
 
 /*----------------------------------------------------------------------------------------------*/
+
+
+/* Button stuff for index page */
+
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+.index-button {
+    background-color: #86C5D8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 150px;
+}
+
+.index-button:hover {
+    background-color: #4a90a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* For Phones */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .index-button {
+        width: 80%;
+        margin: 5px 0;
+        padding: 10px 20px;
+    }
+}
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+
+/* Experience button code */
+
+.experience-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.company-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.company-button {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Added */
+    align-items: center; /* Added */
+    justify-content: center; /* Added */
+    background-color: white;
+}
+
+.company-button img {
+    width: 80%; /* Reduced from 100% */
+    height: 80%; /* Reduced from 100% */
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.company-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(134, 197, 216, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.company-overlay span {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+}
+
+.company-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.company-button:hover .company-overlay {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .company-buttons {
+        gap: 20px;
+    }
+    
+    .company-button {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .company-button img {
+        width: 70%; /* Adjusted for mobile */
+        height: 70%; /* Adjusted for mobile */
+    }
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+/* Project Showcase */
+
+.featured-projects {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.project-showcase {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.featured-project-card {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.featured-project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-overlay h3 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.project-overlay p {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.featured-project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.featured-project-card:hover img {
+    transform: scale(1.1);
+}
+
+.featured-project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .project-showcase {
+        gap: 20px;
+    }
+    
+    .featured-project-card {
+        width: 100%;
+        max-width: 350px;
+        height: 250px;
+    }
+    
+    .project-overlay {
+        opacity: 1; /* Always visible on mobile */
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.65); /* Slightly less dark for better visibility */
+    }
+    
+    .project-overlay h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .project-overlay p {
+        font-size: 0.9rem;
+    }
+    
+    .featured-project-card:hover {
+        transform: none; /* Disable hover animation on mobile */
+    }
+    
+    .featured-project-card:hover img {
+        transform: none; /* Disable image zoom on mobile */
+    }
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
