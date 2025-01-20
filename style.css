@@ -1130,6 +1130,44 @@ body {
     background-image: url('/images/email.svg');
 }
 
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    padding: 20px;
+}
 
+.nav-button {
+    background-color: #86C5D8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 160px;
+}
+
+.nav-button:hover {
+    background-color: #4a90a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .nav-button {
+        width: 80%;
+        padding: 10px 20px;
+    }
+}
 
 /*----------------------------------------------------------------------------------------------*/
