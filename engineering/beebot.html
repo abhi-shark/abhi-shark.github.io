@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee Bot - Abhishek Nair</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+<!-- Navigation Sidebar -->
+<nav id="sidebar">
+    <div class="logo">
+        <h3>Abhishek Nair</h3>
+    </div>
+    <ul>
+        <li><a href="../index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="../about.html"><i class="fas fa-user"></i><span>About Me</span></a></li>
+        <li><a href="../engineering-projects.html"><i class="fas fa-cogs"></i><span>Engineering Projects</span></a></li>
+        <li><a href="../software-projects.html"><i class="fas fa-code"></i><span>Software Projects</span></a></li>
+        <li><a href="../contact.html"><i class="fas fa-envelope"></i><span>Contact Me</span></a></li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Project Header -->
+    <header class="page-header with-image"style="background-image: url('/images/me_proj/bee-bot.png')">
+        <div class="header-content">
+            <h1>Single-Plant Optimized Robotic Pollinator</h1>
+        </div>
+    </header>
+
+    
+    <!-- Project Content -->
+    <div class="project-container">
+        <!-- Quick Info Section -->
+        <div class="project-quick-info">
+            <div class="info-item">
+                <h3>Timeline</h3>
+                <p>Jan - May 2024</p>
+            </div>
+            <div class="info-item">
+                <h3>Technologies</h3>
+                <p>PTC Creo - CAD<br>KiCAD - PCB Design<br> Raspberry Pi, Arduino - Microcontroller Platform</p>
+            </div>
+            <div class="info-item">
+                <h3>Role</h3>
+                <p>Electronics and Software Lead</p>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <a href="../index.html" class="nav-button">
+                Return Home
+            </a>
+            <a href="../engineering-projects.html" class="nav-button">
+                Return to Portfolio
+            </a>
+        </div>
+
+        
+        <!-- Project Overview -->
+        <section class="project-section">
+            <h2>Overview</h2>
+            
+            <p>This project involved designing and building an autonomous robot capable of sorting and delivering color-coded "pollen" to specific plants. The robot utilized finite state machine programming, sensors, and servo mechanisms to achieve the assigned task efficiently and reliably.
+            </p>   
+            <h2>Background</h2>    
+            <p> As part of the ME588 Mechatronics course, the objective was to design a robot that autonomously sorts and delivers the correct color pollen to the designated plant while rejecting others. The robot's core strategy focused on targeting Plant 3, the closest plant to the starting barn. This simplified navigation and maximized efficiency, ensuring higher scores in the challenge.
+            </p>
+ 
+        </section>
+
+        <!-- Key Features/Achievements -->
+        <section class="project-section">
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li><b>Chassis Design:</b> A compact 3D-printed frame using PLA with three stacked layers for electronics, motors, and sorting mechanisms.
+                </li>
+                <li><b>Motion System:</b> Two DC motors with integrated encoders for precise movement.
+                </li>
+                <li><b>Pollen Sorting:</b> A TCS34725 color sensor coupled with servo motors for accurate sorting and delivery.
+                </li>
+                <li><b>Power System:</b> Dual power sources for motors (12V) and peripherals (5V) with a hardware kill switch for safety.
+                </li>
+                <li><b>Finite State Machine (FSM):</b> A Python-based control strategy for autonomous operation, including pre-sorting, gameplay, and shutdown phases.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Technical Details -->
+        <section class="project-section">
+            <h2>Methodology</h2>
+            <p>The robot was designed to prioritize efficiency and simplicity. It utilized motion planning to navigate a straight line between the barn and Plant 3, relying on encoders for precise distance measurement. A TCS34725 color sensor was calibrated to detect specific pollen colors, triggering servo motors to either store or reject the pollen. The finite state machine controlled the robot's operations, transitioning between pre-sorting, delivery, and reloading states based on sensor inputs and predefined conditions.
+            </p>
+            <p>  <h2>Results</h2> 
+                The robot successfully completed all project requirements, including precise pollen sorting, autonomous navigation, and timed delivery. Despite setbacks, such as supply chain issues and hardware failures, the team adapted and achieved a functional system.
+            </p>
+        </section>
+
+        <div class="github-link">
+            <a href="https://abhi-shark.github.io/files/beebotReport.pdf" 
+               target="_blank" 
+               class="github-button">
+                View Simulation Report
+            </a>
+        </div>
+        <div class="github-link">
+            <a href="https://github.com/abhi-shark/abhi-shark/tree/main/mechatronics" 
+               target="_blank" 
+               class="github-button">
+                View on GitHub
+            </a>
+        </div>
+        <!-- Results/Impact -->
+        <section class="project-section">
+            <h2>Learnings</h2>
+            <p>Key takeaways included the importance of redundancy in navigation tools, the need for secure wiring to prevent hardware failures, and the value of simplifying design strategies to achieve robust functionality. Future iterations could incorporate advanced motion planning and IMU-based navigation for improved reliability.
+            </p>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="project-section">
+            <h2>Gallery</h2>
+            <div class="project-gallery">
+                <img src="/images/me_proj/starship/proto1.png" alt="Prototype Image 1">
+                <img src="/images/me_proj/starship/proto2.jpg" alt="Prototype Image 2">
+                <img src="/images/me_proj/starship/cad1.png" alt="CAD Image 1 - folded">
+                <img src="/images/me_proj/starship/cad2.png" alt="CAD Image 2 - unfolded">
+                <img src="/images/me_proj/starship/circuit.png" alt="Motor Circuit Image">
+                <img src="/images/me_proj/starship/irl1.jpg" alt="Actual Prototype Image 1 - folded">
+                <img src="/images/me_proj/starship/irl2.jpg" alt="Actual Prototype Image 2 - unfolded">
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>

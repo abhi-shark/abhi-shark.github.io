@@ -212,7 +212,7 @@ body {
     backdrop-filter: blur(1px);
 }
 
-.header-content h3 {
+.header-content h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     color: white;
@@ -249,6 +249,49 @@ body {
     object-fit: cover;
     z-index: 1;
 }
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.3) 30%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.1) 70%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    padding: 25px 35px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
 
 /*----------------------------------------------------------------------------------------------------*/
 /* Contact Page Styles */
